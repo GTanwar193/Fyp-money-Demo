@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fyp Money Demo</string>
+    <string name="welcome_to">Welcome to \n Fyp Money</string>
+    <string name="craete_account">Create Account</string>
+    <string name="enter_mobile_number">Please enter your mobile number</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="send_otp">Get OTP</string>
+    <string name="please_enter_otp">Please Enter Otp</string>
+    <string name="sec">60 sec</string>
+    <string name="havent_received_otp">Haven\'t received the OTP?</string>
+    <string name="resent">Resend OTP</string>
+    <string name="verify">Verify</string>
+    <string name="slide_up_to_cont">slide up to continue</string>
+    <string name="login">Log In</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="phone_no_verification">Phone No  \n  Verification</string>
+</resources>

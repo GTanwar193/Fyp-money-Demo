@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="recived_otp_viewModel"
+            type="com.example.fypmoneydemo.phone_no_verification.receiveOtp.ReceiveOtpViewModel" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image_tem"
+    tools:context=".phone_no_verification.receiveOtp.ReceiveOtpActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/dimen15dp"
+        android:padding="@dimen/dimen10dp"
+        android:text="@string/please_enter_otp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_35sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/et_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/orange"
+        app:bar_active_color="@color/orange"
+        app:bar_enabled="true"
+        app:bar_height="0dp"
+        app:bar_inactive_color="@color/orange"
+        app:box_margin="8dp"
+        app:height="@dimen/_69sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:length="4"
+        app:otp_box_background="@drawable/rect_otp_orange"
+        app:otp_text_size="@dimen/_35sdp"
+        app:width="@dimen/_69sdp" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/sec"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen15dp"
+        android:layout_marginRight="@dimen/dimen15dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_otp"
+        app:layout_constraintTop_toBottomOf="@+id/et_otp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/havent_received_otp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen15dp"
+            android:gravity="right"
+            android:text="@string/resent"
+            android:textColor="@color/light_red"
+            android:textSize="@dimen/dimen17dp"
+            android:onClick="@{()->recived_otp_viewModel.ResendOtpClicked()}"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen15dp"
+        android:background="@drawable/rect_bg"
+        android:gravity="center"
+        android:onClick="@{()->recived_otp_viewModel.VerifyOtpClicked()}"
+        android:text="@string/verify"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
